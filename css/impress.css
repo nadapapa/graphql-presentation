@@ -208,6 +208,9 @@ a:focus {
 */
 .slide {
     display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
 
     width: 900px;
     height: 700px;
@@ -233,8 +236,18 @@ a:focus {
   list-style: initial;
 }
 
+#title-img {
+  position: relative;
+  z-index: 10;
+  filter: blur(5px) opacity(30%);
+}
+
 h1 {
     font-size: 100pt;
+    z-index: 1000;
+    position: absolute;
+    bottom: 40%;
+    font-weight: bold;
 }
 
 h2 {
@@ -248,7 +261,7 @@ h2 {
     align-items: center;
 }
 
-#history-1 {
+#intro-1 {
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
@@ -260,6 +273,10 @@ h2 {
     -ms-transform-style:     preserve-3d;
     -o-transform-style:      preserve-3d;
     transform-style:         preserve-3d;
+}
+
+.history-item {
+  text-align: center;
 }
 
 /*
