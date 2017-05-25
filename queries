@@ -1,0 +1,209 @@
+query Simple {
+  users {
+    edges {
+      id
+      name
+    }
+  }
+}
+
+
+query Alias {
+  users {
+    edges {
+      id
+      username: name
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+query UsersProjectsFeedbacks {
+  users {
+    edges {
+      id
+      name
+      projects {
+        edges {
+          id
+          name
+          feedbacks {
+            edges {
+              id
+              title
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+query PaginationWithVariables($paginate: Boolean! $perPage: Int) {
+  feedbacks (perPage: $perPage) {
+    pageInfo @include(if: $paginate) {
+      total
+    }
+    edges {
+      title
+      id
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+query Fragment {
+  users {
+    ...getUser
+  }
+}
+
+fragment getUser on Users {
+  edges {
+    id
+    name
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# mutation CreateFeedbackForProject($feedback: Feedback!, $project: Project!) {
+#   createFeedback(feedback: $feedback, project: $project) {
+#     id
+#     title
+#   }
+# }
+
+
+
+  query IntrospectionQuery {
+    __schema {
+      queryType { name }
+      mutationType { name }
+      subscriptionType { name }
+      types {
+        ...FullType
+      }
+      directives {
+        name
+        description
+        locations
+        args {
+          ...InputValue
+        }
+      }
+    }
+  }
+
+  fragment FullType on __Type {
+    kind
+    name
+    description
+    fields(includeDeprecated: true) {
+      name
+      description
+      args {
+        ...InputValue
+      }
+      type {
+        ...TypeRef
+      }
+      isDeprecated
+      deprecationReason
+    }
+    inputFields {
+      ...InputValue
+    }
+    interfaces {
+      ...TypeRef
+    }
+    enumValues(includeDeprecated: true) {
+      name
+      description
+      isDeprecated
+      deprecationReason
+    }
+    possibleTypes {
+      ...TypeRef
+    }
+  }
+
+  fragment InputValue on __InputValue {
+    name
+    description
+    type { ...TypeRef }
+    defaultValue
+  }
+
+  fragment TypeRef on __Type {
+    kind
+    name
+    ofType {
+      kind
+      name
+      ofType {
+        kind
+        name
+        ofType {
+          kind
+          name
+          ofType {
+            kind
+            name
+            ofType {
+              kind
+              name
+              ofType {
+                kind
+                name
+                ofType {
+                  kind
+                  name
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
