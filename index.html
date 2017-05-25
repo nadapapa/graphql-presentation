@@ -35,44 +35,78 @@
     <h1>GraphQL</h1>
   </div>
 
-  <div id="intro-1" class="step slide" data-x="1000" data-y="0">
-      <h2>Mi ez?</h2>
-      <ul>
-        <li>Query Language</li>
-        <li>Réteg a kliens és egy vagy több adatforrás között</li>
-        <li>A kliens határozza meg a válasz formáját</li>
-        <li>Típusos</li>
-      </ul>
-  </div>
-
-  <div id="history-1" class="step slide" data-x="2000" data-y="0" data-scale="1">
+  <div id="history-1" class="step slide scaling" data-x="1000" data-y="0">
       <h2>Historikus okai vannak:</h2>
       <ul>
         <li>REST korlátok</li>
         <li>Túl gyakori hátrakérdezés</li>
-        <li>Túl sok/kevés adat a backendtől</li>
+        <li>Túl sok adat a backendtől</li>
+        <li>Nincs introspekció</li>
       </ul>
   </div>
 
-  <div id="its-in-3d" class="step slide" data-x="2000" data-y="0" data-z="500" data-rotate-x="-90" >
-       <p>TODO</p>
+  <div id="intro-1" class="step slide" data-x="1000" data-y="0" data-z="500" data-rotate-x="-90">
+      <h2>Mi ez?</h2>
+      <ul>
+        <li>Query Language</li>
+        <li>JSON-szerű</li>
+        <li>A kliens határozza meg a válasz formáját</li>
+        <li>Típusos (objects, scalars, enums)</li>
+        <li>Független a HTTP-től</li>
+      </ul>
+  </div>
+
+  <div id="syntax-1" class="step slide" data-x="1000" data-y="1000" data-z="500" data-rotate-x="-90">
+      <h2>Demo time</h2>
+      <ul>
+        <li>Simple query</li>
+        <li>Field alias</li>
+        <li>Query with relationships</li>
+        <li>Query variables</li>
+        <li>Directives</li>
+        <li>Fragments</li>
+      </ul>
    </div>
 
-   <div id="php-1" class="step slide" data-x="2000" data-y="0" data-z="1300" data-rotate-x="-90" data-scale="1">
-       <h2>Historikus okai vannak:</h2>
-       <ul>
-         <li>REST korlátok</li>
-         <li>Túl gyakori hátrakérdezés</li>
-         <li>Túl sok/kevés adat a backendtől</li>
-       </ul>
+   <div id="mind-blown" class="step" data-x="1000" data-y="2000" data-z="500" data-rotate-x="-900" data-rotate-y="-900">
+     <img id="end-image" src="img/mind-blown.gif"/>
    </div>
+
+  <div id="implementations" class="step slide" data-x="1000" data-y="3000" data-z="500" data-rotate-x="-900" data-rotate-y="-900">
+    <h2>Implementációk</h2>
+    Szerver:
+      <ul>
+        <li><a href="https://github.com/graphql/graphql-js">Node.js</a></li>
+        <li><a href="https://github.com/webonyx/graphql-php">PHP</a></li>
+        <li><a href="https://github.com/Folkloreatelier/laravel-graphql">Laravel</a></li>
+      </ul>
+      <br>
+    Kliens:
+      <ul>
+        <li><a href="https://github.com/facebook/relay">Relay (React)</a></li>
+        <li><a href="https://github.com/apollographql">Apollo (React, Angular, iOS, Android, ...)</a></li>
+      </ul>
+    </div>
+
+    <div id="lnks" class="step slide" data-x="1000" data-y="4000" data-z="500" data-rotate-x="-900" data-rotate-y="-900">
+        <h2>Linkek</h2>
+        <ul>
+          <li><a href="http://graphql.org">graphql.org</a></li>
+          <li><a href="https://github.com/chentsulin/awesome-graphql">Awesome GraphQL</a></li>
+          <li><a href="https://github.com/apollographql">Apollo</a></li>
+          <li><a href="https://medium.freecodecamp.com/so-whats-this-graphql-thing-i-keep-hearing-about-baf4d36c20cf">So what’s this GraphQL thing I keep hearing about?</a></li>
+          <li><a href="http://prestonso.github.io/intro-graphql/#/">Introduction to GraphQL</a></li>
+        </ul>
+     </div>
+
+    <div id="end" class="step slide" data-x="1000" data-y="5000" data-z="500" data-rotate-x="-900" data-rotate-y="-900">
+        <h2>Köszönöm a figyelmet!</h1>
+     </div>
 
 </div>
 
-
 <script src="js/impress.js"></script>
 <script>impress().init();</script>
-
 
 </body>
 </html>
