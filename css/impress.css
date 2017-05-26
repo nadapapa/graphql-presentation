@@ -132,6 +132,10 @@ p {
   display: none;
 }
 
+cite {
+    font-style: italic;
+}
+
 /*
     Because the main point behind the impress.js demo is to demo impress.js
     we display a fallback message for users with browsers that don't support
